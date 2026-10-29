@@ -1,0 +1,149 @@
+/* ==========================================================================
+   YIPT design tokens
+   v0.1.0 (2026-10-29): first pass, colors taken from the brand SVGs
+
+   This file is the single source of truth for colors, fonts, sizes and
+   spacing. site.css only ever uses var(--...) from here, so edit values
+   here and the whole site follows.
+
+   Sections:
+     1. Brand colors      raw hex values from brand/*.svg (don't change)
+     2. Palette           what each color is used FOR (swap this block)
+     3. Typography
+     4. Spacing
+     5. Layout & breakpoints
+     6. Shape, motion, focus
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. BRAND COLORS
+     Copied exactly from brand/yipt-logo-592x292.svg and
+     brand/yipt-logo-badge-circle-dark-orange.svg. Don't edit these;
+     change the Palette block below instead.
+     ------------------------------------------------------------------------ */
+  --brand-orange: #FF6B00;   /* "I'D", corner triangle, badge ring */
+  --brand-yellow: #FFB800;   /* "THAT.", badge tagline */
+  --brand-black:  #141414;   /* badge background */
+  --brand-ink:    #1a1a1a;   /* logo text on cream */
+  --brand-cream:  #F5F0E8;   /* logo background, badge text */
+  --brand-gray:   #999999;   /* logo tagline */
+
+  /* ------------------------------------------------------------------------
+     2. PALETTE: PRIMARY (warm orange/yellow on dark)
+     To switch palettes, replace this block (or see the ALTERNATE block
+     at the bottom of the file).
+
+     Contrast on --color-bg (WCAG AA needs 4.5:1 for body text):
+       cream 16.2:1 | yellow 10.6:1 | gray 6.5:1 | orange 6.5:1
+     Dark text on orange buttons: 6.5:1
+     AVOID: orange or gray text on cream (2.5:1, fails)
+     ------------------------------------------------------------------------ */
+  --color-bg:          var(--brand-black);
+  --color-text:        var(--brand-cream);
+  --color-text-muted:  var(--brand-gray);
+  --color-heading:     var(--brand-cream);
+  --color-accent:      var(--brand-orange);   /* buttons, highlights */
+  --color-accent-2:    var(--brand-yellow);   /* links, secondary highlights */
+  --color-on-accent:   var(--brand-black);    /* text sitting on an accent fill */
+  --color-link:        var(--brand-yellow);
+  --color-link-hover:  var(--brand-orange);
+  --color-focus:       var(--brand-yellow);
+
+  /* Surfaces and lines are cream at low opacity, derived from the brand
+     (the logo uses the same trick for its rules) rather than new colors. */
+  --color-surface:     rgb(245 240 232 / 0.05);  /* cards, panels */
+  --color-border:      rgb(245 240 232 / 0.12);  /* dividers, card edges */
+
+  /* Light section (e.g. around the cream logo). Text on it must be ink. */
+  --color-light-bg:    var(--brand-cream);
+  --color-light-text:  var(--brand-ink);
+
+  /* ------------------------------------------------------------------------
+     3. TYPOGRAPHY
+     Fonts load from Google Fonts in each page's <head>.
+     Sizes are fluid: clamp(min, preferred, max), from phone to desktop.
+     ------------------------------------------------------------------------ */
+  --font-display: 'Black Han Sans', 'Arial Black', 'Helvetica Neue', sans-serif;
+  --font-body:    'Oswald', 'Arial Narrow', Arial, sans-serif;
+
+  --weight-body:   400;
+  --weight-strong: 600;
+
+  --text-sm:   0.875rem;
+  --text-base: 1.125rem;
+  --text-lg:   clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-h3:   clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  --text-h2:   clamp(2rem, 1.5rem + 2vw, 3rem);
+  --text-h1:   clamp(2.75rem, 1.75rem + 4.5vw, 5.5rem);
+
+  --leading-tight: 1.05;   /* display headings */
+  --leading-body:  1.6;
+
+  --tracking-display: -0.01em;  /* matches the logo's letter-spacing="-1" */
+  --tracking-label:   0.2em;    /* spaced caps, like "3D PRINTING FOR EVERYONE" */
+
+  /* ------------------------------------------------------------------------
+     4. SPACING (one scale for margins, padding and gaps)
+     ------------------------------------------------------------------------ */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+
+  /* ------------------------------------------------------------------------
+     5. LAYOUT & BREAKPOINTS
+     CSS can't use variables inside @media, so the breakpoints are listed
+     here for reference and typed as literal values in site.css.
+       --bp-md: 48em  (768px)  tablets and up
+       --bp-lg: 64em  (1024px) desktops and up
+     ------------------------------------------------------------------------ */
+  --container-max:    72rem;
+  --container-narrow: 42rem;   /* reading width for blog / explainer text */
+  --gutter:           var(--space-4);   /* side padding on phones (16px) */
+  --header-badge-size: 4rem;            /* round badge in the site header */
+
+  /* ------------------------------------------------------------------------
+     6. SHAPE, MOTION, FOCUS
+     ------------------------------------------------------------------------ */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+
+  --border-width: 2px;
+
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --focus-ring-width:  3px;
+  --focus-ring-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   PALETTE: ALTERNATE (cyan/navy)
+   TODO: waiting on hex values. When they arrive, fill these in, then
+   either paste them over the PRIMARY palette block above, or uncomment
+   this block and add data-palette="alt" to <html> to preview.
+   -------------------------------------------------------------------------- */
+/*
+[data-palette="alt"] {
+  --color-bg:          TODO navy;
+  --color-text:        TODO;
+  --color-text-muted:  TODO;
+  --color-heading:     TODO;
+  --color-accent:      TODO cyan;
+  --color-accent-2:    TODO;
+  --color-on-accent:   TODO;
+  --color-link:        TODO;
+  --color-link-hover:  TODO;
+  --color-focus:       TODO;
+  --color-surface:     TODO;
+  --color-border:      TODO;
+}
+*/

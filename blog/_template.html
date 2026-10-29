@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- YIPT blog post TEMPLATE | v0.5.0 (2026-10-29)
+
+     HOW TO WRITE A NEW POST
+       1. Copy this file and rename it, e.g. blog/my-first-print.html
+          (lowercase, hyphens, no spaces).
+       2. DELETE the <meta name="robots" content="noindex"> line below.
+       3. Change: <title>, meta description, <h1>, the <time> date
+          (datetime="YYYY-MM-DD" plus the readable date), read time,
+          header photo and alt text.
+       4. Replace the body inside <div class="prose">.
+       5. Add a card for the post at the top of blog/index.html.
+     Header and footer are shared: keep them in sync with index.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post title | Yeah, I'd Print That</title>
+  <meta name="description" content="[PLACEHOLDER] One-sentence summary of the post for search results.">
+  <meta name="theme-color" content="#141414">
+  <!-- Icons (made from the badge in brand/) -->
+  <link rel="icon" href="../favicon.ico" sizes="48x48">
+  <link rel="icon" href="../assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <!-- Search and sharing. og:title / og:description repeat the title and
+       description above; keep them in sync when you edit those. -->
+  <!-- Change to the new post's address -->
+  <link rel="canonical" href="https://www.yeahidprintthat.com/blog/post-file-name.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Yeah, I'd Print That">
+  <meta property="og:url" content="https://www.yeahidprintthat.com/blog/post-file-name.html">
+  <meta property="og:title" content="Post title | Yeah, I'd Print That">
+  <meta property="og:description" content="[PLACEHOLDER] One-sentence summary of the post for search results.">
+  <meta property="og:image" content="https://www.yeahidprintthat.com/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yeah, I'd Print That logo: 3D printing for everyone">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="noindex">  <!-- DELETE this line in real posts -->
+
+  <!-- Starts the mobile menu closed when JS is available (see site.js) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@400;600&display=swap">
+
+  <link rel="stylesheet" href="../assets/css/tokens.css">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SITE HEADER (shared: keep identical on every page, except aria-current) ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="../index.html" aria-label="Yeah, I'd Print That: home">
+        <!-- Badge from brand/yipt-logo-badge-circle-dark-orange.svg, inlined so it
+             uses the page fonts. Same shapes and colors; the SVG's own <style>
+             block is swapped for font attributes so it can't affect the page. -->
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="hdr-badge-arc" d="M 34,146 A 70,70 0 0 0 166,146" fill="none"/>
+            <clipPath id="hdr-badge-clip"><circle cx="100" cy="100" r="98"/></clipPath>
+          </defs>
+          <circle cx="100" cy="100" r="98" fill="#141414"/>
+          <g clip-path="url(#hdr-badge-clip)">
+            <path d="M 100 100 L 100 2 A 98 98 0 0 1 180 46 Z" fill="#FFB800" opacity="0.16"/>
+          </g>
+          <circle cx="100" cy="100" r="98" fill="none" stroke="#FF6B00" stroke-width="3"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#FFB800" stroke-width="0.75" opacity="0.5"/>
+          <g font-family="'Black Han Sans', 'Arial Black', sans-serif" text-anchor="middle" letter-spacing="0.5">
+            <text x="100" y="76" font-size="21" fill="#F5F0E8">YEAH,</text>
+            <text x="100" y="106" font-size="23"><tspan fill="#F5F0E8">I&#8217;D </tspan><tspan fill="none" stroke="#FF6B00" stroke-width="1.4">PRINT</tspan></text>
+            <text x="100" y="136" font-size="21" fill="#F5F0E8">THAT.</text>
+          </g>
+          <text font-family="'Oswald', Arial, sans-serif" font-weight="600" font-size="7.5" fill="#FFB800" letter-spacing="2.2">
+            <textPath href="#hdr-badge-arc" startOffset="50%" text-anchor="middle">3D PRINTING FOR EVERYONE</textPath>
+          </text>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../how-its-made.html">How It's Made</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="index.html" aria-current="page">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SITE HEADER ===== -->
+
+  <main id="main">
+    <article class="section">
+      <div class="container container--narrow">
+
+        <header class="post-header">
+          <span class="eyebrow"><a href="index.html">Blog</a></span>
+          <h1>Post title goes here</h1>
+          <p class="post-meta"><time datetime="2026-10-29">October 29, 2026</time> &middot; 4 min read</p>
+          <img class="post-header__photo" src="../assets/images/placeholder-16x9.svg" alt="[PLACEHOLDER] Describe the header photo" width="1600" height="900" decoding="async">
+        </header>
+
+        <div class="prose" style="margin-top: var(--space-7)">
+          <!-- Body text: plain <p> paragraphs. Use <h2> for section headings
+               (the post title is the only <h1>). -->
+          <p><span class="placeholder-tag">[PLACEHOLDER]</span> Opening paragraph. Hook the reader in a sentence or two: what is this post about, and why should someone who's never touched a printer care?</p>
+
+          <h2>A section heading</h2>
+          <p><span class="placeholder-tag">[PLACEHOLDER]</span> Body paragraph. Keep paragraphs short; most people will read this on a phone.</p>
+
+          <ul>
+            <li>A bulleted list item</li>
+            <li>Another item</li>
+            <li>A third item</li>
+          </ul>
+
+          <!-- Photo with a caption. Export post photos at 16:9 or 4:3, around 1600px wide. -->
+          <figure>
+            <img src="../assets/images/placeholder-16x9.svg" alt="[PLACEHOLDER] Describe what's in the photo" width="1600" height="900" loading="lazy" decoding="async">
+            <figcaption>[PLACEHOLDER] A short caption under the photo.</figcaption>
+          </figure>
+
+          <h3>A smaller heading</h3>
+          <p><span class="placeholder-tag">[PLACEHOLDER]</span> Use a quote to call out the main idea:</p>
+
+          <blockquote>
+            <p>A pull quote or key takeaway goes here.</p>
+          </blockquote>
+
+          <ol>
+            <li>A numbered step</li>
+            <li>Another step</li>
+          </ol>
+
+          <p><span class="placeholder-tag">[PLACEHOLDER]</span> Closing paragraph. Point readers somewhere next: the gallery, another post, or the contact page.</p>
+        </div>
+
+        <footer class="post-footer">
+          <a href="index.html">&larr; All posts</a>
+          <a href="../how-its-made.html">New here? How 3D printing works &rarr;</a>
+        </footer>
+
+      </div>
+    </article>
+  </main>
+
+  <!-- ===== SITE FOOTER (shared: keep identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__tagline">3D printing for everyone</p>
+        <p>&copy; 2026 Yeah, I'd Print That</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="../how-its-made.html">How It's Made</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><span class="placeholder-tag">[PLACEHOLDER]</span> Social links</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- ===== /SITE FOOTER ===== -->
+</body>
+</html>

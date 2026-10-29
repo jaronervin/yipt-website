@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- YIPT home page | v0.2.0 (2026-10-29)
+     The header and footer blocks below are copied into every page.
+     If you change one, change it on every page (search for "SITE HEADER"). -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yeah, I'd Print That | 3D Printing for Everyone</title>
+  <meta name="description" content="[PLACEHOLDER] YIPT makes 3D printing approachable: what it is, how it works, and the prints that come out of it.">
+  <meta name="theme-color" content="#141414">
+  <!-- Icons (made from the badge in brand/) -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Search and sharing. og:title / og:description repeat the title and
+       description above; keep them in sync when you edit those. -->
+  <link rel="canonical" href="https://www.yeahidprintthat.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yeah, I'd Print That">
+  <meta property="og:url" content="https://www.yeahidprintthat.com/">
+  <meta property="og:title" content="Yeah, I'd Print That | 3D Printing for Everyone">
+  <meta property="og:description" content="[PLACEHOLDER] YIPT makes 3D printing approachable: what it is, how it works, and the prints that come out of it.">
+  <meta property="og:image" content="https://www.yeahidprintthat.com/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yeah, I'd Print That logo: 3D printing for everyone">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Starts the mobile menu closed when JS is available (see site.js) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@400;600&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SITE HEADER (shared: keep identical on every page, except aria-current) ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="index.html" aria-label="Yeah, I'd Print That: home">
+        <!-- Badge from brand/yipt-logo-badge-circle-dark-orange.svg, inlined so it
+             uses the page fonts. Same shapes and colors; the SVG's own <style>
+             block is swapped for font attributes so it can't affect the page. -->
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="hdr-badge-arc" d="M 34,146 A 70,70 0 0 0 166,146" fill="none"/>
+            <clipPath id="hdr-badge-clip"><circle cx="100" cy="100" r="98"/></clipPath>
+          </defs>
+          <circle cx="100" cy="100" r="98" fill="#141414"/>
+          <g clip-path="url(#hdr-badge-clip)">
+            <path d="M 100 100 L 100 2 A 98 98 0 0 1 180 46 Z" fill="#FFB800" opacity="0.16"/>
+          </g>
+          <circle cx="100" cy="100" r="98" fill="none" stroke="#FF6B00" stroke-width="3"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#FFB800" stroke-width="0.75" opacity="0.5"/>
+          <g font-family="'Black Han Sans', 'Arial Black', sans-serif" text-anchor="middle" letter-spacing="0.5">
+            <text x="100" y="76" font-size="21" fill="#F5F0E8">YEAH,</text>
+            <text x="100" y="106" font-size="23"><tspan fill="#F5F0E8">I&#8217;D </tspan><tspan fill="none" stroke="#FF6B00" stroke-width="1.4">PRINT</tspan></text>
+            <text x="100" y="136" font-size="21" fill="#F5F0E8">THAT.</text>
+          </g>
+          <text font-family="'Oswald', Arial, sans-serif" font-weight="600" font-size="7.5" fill="#FFB800" letter-spacing="2.2">
+            <textPath href="#hdr-badge-arc" startOffset="50%" text-anchor="middle">3D PRINTING FOR EVERYONE</textPath>
+          </text>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SITE HEADER ===== -->
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div>
+          <span class="eyebrow">3D printing for everyone</span>
+          <h1>Your next favorite thing hasn't been printed yet.</h1>
+          <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> 3D printing turns ideas into real objects, one paper-thin layer at a time. No engineering degree required. We'll show you how it works and what it can make.</p>
+          <div class="hero__actions">
+            <a class="btn" href="how-its-made.html">See how it works</a>
+            <a class="btn btn--outline" href="gallery.html">Browse the gallery</a>
+          </div>
+        </div>
+
+        <!-- Full logo shown as-is on its cream background.
+             Swap for the dark-background logo when it's ready. -->
+        <div class="hero__logo">
+          <svg role="img" aria-labelledby="hero-logo-title" viewBox="0 0 592 292" width="592" height="292">
+            <title id="hero-logo-title">Yeah, I'd Print That. 3D printing for everyone.</title>
+            <rect width="592" height="292" fill="#f5f0e8"/>
+            <polygon points="592,222 592,292 522,292" fill="#FF6B00"/>
+            <rect x="52" y="108" width="488" height="2" fill="rgba(0,0,0,0.08)"/>
+            <rect x="52" y="192" width="488" height="2" fill="rgba(0,0,0,0.08)"/>
+            <text x="52" y="98" font-family="'Black Han Sans', sans-serif" font-size="62" letter-spacing="-1" fill="#1a1a1a">YEAH,</text>
+            <text x="52" y="184" font-family="'Black Han Sans', sans-serif" font-size="62" letter-spacing="-1" fill="#FF6B00">I'D</text>
+            <text x="158" y="184" font-family="'Black Han Sans', sans-serif" font-size="62" letter-spacing="-1" fill="none" stroke="#1a1a1a" stroke-width="2.5">PRINT</text>
+            <text x="52" y="268" font-family="'Black Han Sans', sans-serif" font-size="62" letter-spacing="-1" fill="#FFB800" stroke="#1a1a1a" stroke-width="2" paint-order="stroke">THAT.</text>
+            <text x="52" y="285" font-family="'Oswald', sans-serif" font-size="11" letter-spacing="3.5" fill="#999" font-weight="400">3D PRINTING FOR EVERYONE</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works, in three steps -->
+    <section class="section" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">The short version</span>
+            <h2 id="steps-title">How a print happens</h2>
+          </div>
+          <a href="how-its-made.html">The longer version &rarr;</a>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3>Design it</h3>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> Every print starts as a 3D model: a digital file you can make yourself or download from someone else.</p>
+          </li>
+          <li>
+            <h3>Slice it</h3>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> Software cuts the model into hundreds of thin layers and tells the printer exactly where to go.</p>
+          </li>
+          <li>
+            <h3>Print it</h3>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> The printer melts plastic and draws each layer on top of the last until your object appears.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Featured prints -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Fresh off the printer</span>
+            <h2 id="featured-title">Featured prints</h2>
+          </div>
+          <a href="gallery.html">See the full gallery &rarr;</a>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="placeholder-img" style="--ratio: 4 / 5">Print photo 4:5</div>
+            <h3>Print name</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One line about the print.</p>
+          </article>
+          <article class="card">
+            <div class="placeholder-img" style="--ratio: 4 / 5">Print photo 4:5</div>
+            <h3>Print name</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One line about the print.</p>
+          </article>
+          <article class="card">
+            <div class="placeholder-img" style="--ratio: 4 / 5">Print photo 4:5</div>
+            <h3>Print name</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One line about the print.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest from the blog -->
+    <section class="section" aria-labelledby="blog-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">From the blog</span>
+            <h2 id="blog-title">Latest posts</h2>
+          </div>
+          <a href="blog/index.html">All posts &rarr;</a>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="placeholder-img" style="--ratio: 16 / 9">Post image 16:9</div>
+            <h3><a href="blog/index.html">Post title</a></h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> A sentence or two teasing the post.</p>
+          </article>
+          <article class="card">
+            <div class="placeholder-img" style="--ratio: 16 / 9">Post image 16:9</div>
+            <h3><a href="blog/index.html">Post title</a></h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> A sentence or two teasing the post.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing call to action -->
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container container--narrow">
+        <h2 id="cta-title">Got an idea?</h2>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> Tell us what you'd love to see printed. Chances are, yeah, we'd print that.</p>
+        <a class="btn" href="contact.html">Get in touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== SITE FOOTER (shared: keep identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__tagline">3D printing for everyone</p>
+        <p>&copy; 2026 Yeah, I'd Print That</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="placeholder-tag">[PLACEHOLDER]</span> Social links</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- ===== /SITE FOOTER ===== -->
+</body>
+</html>

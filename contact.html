@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- YIPT Contact | v0.6.0 (2026-10-29)
+     Plain email link for now (GitHub Pages can't process forms).
+     Header and footer are shared: keep them in sync with index.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Yeah, I'd Print That</title>
+  <meta name="description" content="[PLACEHOLDER] Questions about 3D printing, a print in the gallery or an idea? Email Yeah, I'd Print That.">
+  <meta name="theme-color" content="#141414">
+  <!-- Icons (made from the badge in brand/) -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Search and sharing. og:title / og:description repeat the title and
+       description above; keep them in sync when you edit those. -->
+  <link rel="canonical" href="https://www.yeahidprintthat.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yeah, I'd Print That">
+  <meta property="og:url" content="https://www.yeahidprintthat.com/contact.html">
+  <meta property="og:title" content="Contact | Yeah, I'd Print That">
+  <meta property="og:description" content="[PLACEHOLDER] Questions about 3D printing, a print in the gallery or an idea? Email Yeah, I'd Print That.">
+  <meta property="og:image" content="https://www.yeahidprintthat.com/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yeah, I'd Print That logo: 3D printing for everyone">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Starts the mobile menu closed when JS is available (see site.js) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@400;600&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SITE HEADER (shared: keep identical on every page, except aria-current) ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="index.html" aria-label="Yeah, I'd Print That: home">
+        <!-- Badge from brand/yipt-logo-badge-circle-dark-orange.svg, inlined so it
+             uses the page fonts. Same shapes and colors; the SVG's own <style>
+             block is swapped for font attributes so it can't affect the page. -->
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="hdr-badge-arc" d="M 34,146 A 70,70 0 0 0 166,146" fill="none"/>
+            <clipPath id="hdr-badge-clip"><circle cx="100" cy="100" r="98"/></clipPath>
+          </defs>
+          <circle cx="100" cy="100" r="98" fill="#141414"/>
+          <g clip-path="url(#hdr-badge-clip)">
+            <path d="M 100 100 L 100 2 A 98 98 0 0 1 180 46 Z" fill="#FFB800" opacity="0.16"/>
+          </g>
+          <circle cx="100" cy="100" r="98" fill="none" stroke="#FF6B00" stroke-width="3"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#FFB800" stroke-width="0.75" opacity="0.5"/>
+          <g font-family="'Black Han Sans', 'Arial Black', sans-serif" text-anchor="middle" letter-spacing="0.5">
+            <text x="100" y="76" font-size="21" fill="#F5F0E8">YEAH,</text>
+            <text x="100" y="106" font-size="23"><tspan fill="#F5F0E8">I&#8217;D </tspan><tspan fill="none" stroke="#FF6B00" stroke-width="1.4">PRINT</tspan></text>
+            <text x="100" y="136" font-size="21" fill="#F5F0E8">THAT.</text>
+          </g>
+          <text font-family="'Oswald', Arial, sans-serif" font-weight="600" font-size="7.5" fill="#FFB800" letter-spacing="2.2">
+            <textPath href="#hdr-badge-arc" startOffset="50%" text-anchor="middle">3D PRINTING FOR EVERYONE</textPath>
+          </text>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SITE HEADER ===== -->
+
+  <main id="main">
+
+    <!-- Page intro -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact</span>
+        <h1>Go on, ask.</h1>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> There are no dumb 3D printing questions. Email is the best way to reach us.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+
+        <!-- Email panel. The address appears twice below (link text and
+             mailto:). Change both when the real address is set up. -->
+        <div class="contact-panel">
+          <span class="eyebrow">Email</span>
+          <a class="contact-panel__email" href="mailto:hello@yeahidprintthat.com">hello@<wbr>yeahidprintthat.com</a>
+          <p class="text-muted" style="margin-top: var(--space-3)"><span class="placeholder-tag">[PLACEHOLDER]</span> Address not set up yet. We usually reply within a few days.</p>
+          <a class="btn" href="mailto:hello@yeahidprintthat.com">Write an email</a>
+        </div>
+
+        <div>
+          <h2>Good things to write about</h2>
+          <ul>
+            <li>A question about how 3D printing works</li>
+            <li>A print from the <a href="gallery.html">gallery</a> you'd like to know more about</li>
+            <li>An idea you're wondering whether anyone could print</li>
+            <li>Something on the <a href="blog/index.html">blog</a> you want to dig into</li>
+          </ul>
+          <p class="text-muted">Quick answers to common questions are on the <a href="how-its-made.html#faq">How It's Made</a> page.</p>
+          <p><span class="placeholder-tag">[PLACEHOLDER]</span> Social links go here.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== SITE FOOTER (shared: keep identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__tagline">3D printing for everyone</p>
+        <p>&copy; 2026 Yeah, I'd Print That</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="placeholder-tag">[PLACEHOLDER]</span> Social links</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- ===== /SITE FOOTER ===== -->
+</body>
+</html>

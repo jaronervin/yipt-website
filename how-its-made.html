@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!-- YIPT How It's Made | v0.3.0 (2026-10-29)
+     Friendly explainer of 3D printing for non-makers.
+     Header and footer are shared: keep them in sync with index.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How It's Made | Yeah, I'd Print That</title>
+  <meta name="description" content="[PLACEHOLDER] How 3D printing works, in plain English: from a digital file to a real object in four steps, plus the words you'll hear and answers to common questions.">
+  <meta name="theme-color" content="#141414">
+  <!-- Icons (made from the badge in brand/) -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Search and sharing. og:title / og:description repeat the title and
+       description above; keep them in sync when you edit those. -->
+  <link rel="canonical" href="https://www.yeahidprintthat.com/how-its-made.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yeah, I'd Print That">
+  <meta property="og:url" content="https://www.yeahidprintthat.com/how-its-made.html">
+  <meta property="og:title" content="How It's Made | Yeah, I'd Print That">
+  <meta property="og:description" content="[PLACEHOLDER] How 3D printing works, in plain English: from a digital file to a real object in four steps, plus the words you'll hear and answers to common questions.">
+  <meta property="og:image" content="https://www.yeahidprintthat.com/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yeah, I'd Print That logo: 3D printing for everyone">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Starts the mobile menu closed when JS is available (see site.js) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@400;600&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SITE HEADER (shared: keep identical on every page, except aria-current) ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="index.html" aria-label="Yeah, I'd Print That: home">
+        <!-- Badge from brand/yipt-logo-badge-circle-dark-orange.svg, inlined so it
+             uses the page fonts. Same shapes and colors; the SVG's own <style>
+             block is swapped for font attributes so it can't affect the page. -->
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="hdr-badge-arc" d="M 34,146 A 70,70 0 0 0 166,146" fill="none"/>
+            <clipPath id="hdr-badge-clip"><circle cx="100" cy="100" r="98"/></clipPath>
+          </defs>
+          <circle cx="100" cy="100" r="98" fill="#141414"/>
+          <g clip-path="url(#hdr-badge-clip)">
+            <path d="M 100 100 L 100 2 A 98 98 0 0 1 180 46 Z" fill="#FFB800" opacity="0.16"/>
+          </g>
+          <circle cx="100" cy="100" r="98" fill="none" stroke="#FF6B00" stroke-width="3"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#FFB800" stroke-width="0.75" opacity="0.5"/>
+          <g font-family="'Black Han Sans', 'Arial Black', sans-serif" text-anchor="middle" letter-spacing="0.5">
+            <text x="100" y="76" font-size="21" fill="#F5F0E8">YEAH,</text>
+            <text x="100" y="106" font-size="23"><tspan fill="#F5F0E8">I&#8217;D </tspan><tspan fill="none" stroke="#FF6B00" stroke-width="1.4">PRINT</tspan></text>
+            <text x="100" y="136" font-size="21" fill="#F5F0E8">THAT.</text>
+          </g>
+          <text font-family="'Oswald', Arial, sans-serif" font-weight="600" font-size="7.5" fill="#FFB800" letter-spacing="2.2">
+            <textPath href="#hdr-badge-arc" startOffset="50%" text-anchor="middle">3D PRINTING FOR EVERYONE</textPath>
+          </text>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-its-made.html" aria-current="page">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SITE HEADER ===== -->
+
+  <main id="main">
+
+    <!-- Page intro -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">How it's made</span>
+        <h1>3D printing, explained like a friend would.</h1>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> No jargon, no engineering degree. Just how a file on a computer turns into a real thing you can hold.</p>
+        <ul class="toc" aria-label="On this page">
+          <li><a href="#what">What is it?</a></li>
+          <li><a href="#steps">The four steps</a></li>
+          <li><a href="#materials">Materials</a></li>
+          <li><a href="#words">Words you'll hear</a></li>
+          <li><a href="#faq">Questions</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- What is 3D printing? -->
+    <section class="section" id="what" aria-labelledby="what-title">
+      <div class="container container--narrow">
+        <span class="eyebrow">The big idea</span>
+        <h2 id="what-title">What is 3D printing?</h2>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> A 3D printer builds an object by stacking up thin layers of material, one on top of another, until the whole shape exists.</p>
+        <p>Most things in your house were made by cutting material away or squirting it into a mold. 3D printing works the other way around: it starts with nothing and <strong>adds</strong> material only where it's needed.</p>
+        <p>The most common kind of home printer works a lot like a robot-controlled hot glue gun. It melts a plastic thread and draws each layer with it, thinner than a credit card, over and over, until your object is done.</p>
+      </div>
+    </section>
+
+    <!-- The four steps -->
+    <section class="section" id="steps" aria-labelledby="steps-title">
+      <div class="container">
+        <span class="eyebrow">From idea to object</span>
+        <h2 id="steps-title">The four steps</h2>
+
+        <ol class="explainer" style="margin-top: var(--space-7)">
+          <li>
+            <div class="placeholder-img" style="--ratio: 4 / 3">Photo: 3D model on screen 4:3</div>
+            <div class="explainer__step">
+              <h3>Find or design a model</h3>
+              <p><span class="placeholder-tag">[PLACEHOLDER]</span> Every print starts as a 3D model, a digital file that describes the shape. You can design your own with free, beginner-friendly tools like Tinkercad, or download one of millions of ready-made models from sites like Printables, MakerWorld or Thingiverse.</p>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder-img" style="--ratio: 4 / 3">Photo: slicer software 4:3</div>
+            <div class="explainer__step">
+              <h3>Slice it</h3>
+              <p><span class="placeholder-tag">[PLACEHOLDER]</span> A program called a slicer cuts the model into hundreds of flat layers, like slicing a loaf of bread. It works out the exact path the printer should follow, how solid the inside should be, and where temporary supports are needed to hold up overhanging parts.</p>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder-img" style="--ratio: 4 / 3">Photo or video: printer mid-print 4:3</div>
+            <div class="explainer__step">
+              <h3>Print it</h3>
+              <p><span class="placeholder-tag">[PLACEHOLDER]</span> The printer heats its nozzle to around 200&deg;C, melts the plastic and draws the first layer onto the bed. Then it rises a fraction of a millimeter and draws the next one. A keychain might take 20 minutes; a big sculpture can take a day or more.</p>
+            </div>
+          </li>
+          <li>
+            <div class="placeholder-img" style="--ratio: 4 / 3">Photo: finished, painted print 4:3</div>
+            <div class="explainer__step">
+              <h3>Finish it</h3>
+              <p><span class="placeholder-tag">[PLACEHOLDER]</span> Snap off any supports, and the print is ready. Or keep going: sand it smooth, paint it, glue pieces together or add lights and magnets. This is where a print turns into a piece of art.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Materials -->
+    <section class="section" id="materials" aria-labelledby="materials-title">
+      <div class="container">
+        <span class="eyebrow">What it's made of</span>
+        <h2 id="materials-title">Materials</h2>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> Home printers mostly use plastic, but not all plastic is the same.</p>
+        <div class="grid" style="margin-top: var(--space-6)">
+          <article class="card">
+            <h3>PLA</h3>
+            <p class="text-muted">The everyday favorite. Made from plants like corn, easy to print, low smell and available in every color you can think of.</p>
+          </article>
+          <article class="card">
+            <h3>PETG</h3>
+            <p class="text-muted">The tough one. The same family of plastic as water bottles, so it handles knocks, sunshine and a bit of heat.</p>
+          </article>
+          <article class="card">
+            <h3>TPU</h3>
+            <p class="text-muted">The bendy one. Rubbery and flexible, great for phone cases, grips and squishy toys.</p>
+          </article>
+          <article class="card">
+            <h3>Resin</h3>
+            <p class="text-muted">The detailed one. A liquid hardened by light, layer by layer, for super-fine details like miniatures and jewelry.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Glossary -->
+    <section class="section" id="words" aria-labelledby="words-title">
+      <div class="container">
+        <span class="eyebrow">Cheat sheet</span>
+        <h2 id="words-title">Words you'll hear</h2>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> Makers love their jargon. Here's what it all means.</p>
+        <dl class="glossary" style="margin-top: var(--space-6)">
+          <div><dt>Filament</dt><dd>The plastic "thread" a printer melts, sold on spools.</dd></div>
+          <div><dt>Nozzle</dt><dd>The hot metal tip the melted plastic comes out of.</dd></div>
+          <div><dt>Print bed</dt><dd>The flat surface the object is built on.</dd></div>
+          <div><dt>Layer height</dt><dd>How thick each layer is. Thinner layers look smoother but take longer.</dd></div>
+          <div><dt>Infill</dt><dd>The pattern inside a print. Most prints are partly hollow to save time and plastic.</dd></div>
+          <div><dt>Supports</dt><dd>Temporary scaffolding that holds up overhangs, snapped off afterward.</dd></div>
+          <div><dt>Slicer</dt><dd>Software that turns a 3D model into instructions for the printer.</dd></div>
+          <div><dt>STL / 3MF</dt><dd>The most common file types for 3D models.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <span class="eyebrow">Good questions</span>
+        <h2 id="faq-title">Questions people ask</h2>
+        <div class="faq" style="margin-top: var(--space-6)">
+          <details>
+            <summary>Is it hard to get started?</summary>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> Not anymore. Many newer printers come mostly assembled and calibrate themselves, so you can go from unboxing to a first print in an afternoon.</p>
+          </details>
+          <details>
+            <summary>Do I need my own printer?</summary>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> Nope. Many public libraries and makerspaces have printers you can use, and print services (like us) can print a model for you.</p>
+          </details>
+          <details>
+            <summary>How long does a print take?</summary>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> Anywhere from a few minutes to a few days. It depends on the size, how detailed it is and how solid it needs to be.</p>
+          </details>
+          <details>
+            <summary>Is it safe? Does it smell?</summary>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> PLA, the most common plastic, has very little smell. It's still a good idea to print in a room with some fresh air. Resin printing needs more care: gloves and good ventilation.</p>
+          </details>
+          <details>
+            <summary>Can I print anything?</summary>
+            <p><span class="placeholder-tag">[PLACEHOLDER]</span> Almost. Prints are limited by the size of the printer, and some shapes need supports. And just like photocopying a book, printing someone else's design is only okay if their license allows it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing call to action -->
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container container--narrow">
+        <h2 id="cta-title">Seen enough? Go see the prints.</h2>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> Everything in the gallery was made exactly this way.</p>
+        <a class="btn" href="gallery.html">Browse the gallery</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== SITE FOOTER (shared: keep identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__tagline">3D printing for everyone</p>
+        <p>&copy; 2026 Yeah, I'd Print That</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="placeholder-tag">[PLACEHOLDER]</span> Social links</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- ===== /SITE FOOTER ===== -->
+</body>
+</html>

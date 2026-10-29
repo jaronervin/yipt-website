@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- YIPT Gallery | v0.4.0 (2026-10-29)
+     Printed artwork. No shop yet: "Want one?" goes to the contact page.
+     Header and footer are shared: keep them in sync with index.html. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | Yeah, I'd Print That</title>
+  <meta name="description" content="[PLACEHOLDER] Printed artwork from Yeah, I'd Print That, with the material and print time behind each piece.">
+  <meta name="theme-color" content="#141414">
+  <!-- Icons (made from the badge in brand/) -->
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Search and sharing. og:title / og:description repeat the title and
+       description above; keep them in sync when you edit those. -->
+  <link rel="canonical" href="https://www.yeahidprintthat.com/gallery.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yeah, I'd Print That">
+  <meta property="og:url" content="https://www.yeahidprintthat.com/gallery.html">
+  <meta property="og:title" content="Gallery | Yeah, I'd Print That">
+  <meta property="og:description" content="[PLACEHOLDER] Printed artwork from Yeah, I'd Print That, with the material and print time behind each piece.">
+  <meta property="og:image" content="https://www.yeahidprintthat.com/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Yeah, I'd Print That logo: 3D printing for everyone">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Starts the mobile menu closed when JS is available (see site.js) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Oswald:wght@400;600&display=swap">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== SITE HEADER (shared: keep identical on every page, except aria-current) ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__brand" href="index.html" aria-label="Yeah, I'd Print That: home">
+        <!-- Badge from brand/yipt-logo-badge-circle-dark-orange.svg, inlined so it
+             uses the page fonts. Same shapes and colors; the SVG's own <style>
+             block is swapped for font attributes so it can't affect the page. -->
+        <svg viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+          <defs>
+            <path id="hdr-badge-arc" d="M 34,146 A 70,70 0 0 0 166,146" fill="none"/>
+            <clipPath id="hdr-badge-clip"><circle cx="100" cy="100" r="98"/></clipPath>
+          </defs>
+          <circle cx="100" cy="100" r="98" fill="#141414"/>
+          <g clip-path="url(#hdr-badge-clip)">
+            <path d="M 100 100 L 100 2 A 98 98 0 0 1 180 46 Z" fill="#FFB800" opacity="0.16"/>
+          </g>
+          <circle cx="100" cy="100" r="98" fill="none" stroke="#FF6B00" stroke-width="3"/>
+          <circle cx="100" cy="100" r="90" fill="none" stroke="#FFB800" stroke-width="0.75" opacity="0.5"/>
+          <g font-family="'Black Han Sans', 'Arial Black', sans-serif" text-anchor="middle" letter-spacing="0.5">
+            <text x="100" y="76" font-size="21" fill="#F5F0E8">YEAH,</text>
+            <text x="100" y="106" font-size="23"><tspan fill="#F5F0E8">I&#8217;D </tspan><tspan fill="none" stroke="#FF6B00" stroke-width="1.4">PRINT</tspan></text>
+            <text x="100" y="136" font-size="21" fill="#F5F0E8">THAT.</text>
+          </g>
+          <text font-family="'Oswald', Arial, sans-serif" font-weight="600" font-size="7.5" fill="#FFB800" letter-spacing="2.2">
+            <textPath href="#hdr-badge-arc" startOffset="50%" text-anchor="middle">3D PRINTING FOR EVERYONE</textPath>
+          </text>
+        </svg>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ===== /SITE HEADER ===== -->
+
+  <main id="main">
+
+    <!-- Page intro -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Gallery</span>
+        <h1>Stuff we printed. On purpose.</h1>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> Every piece here started as a file and came off a printer one layer at a time. Each card shows what it's made of and how long it took.</p>
+      </div>
+    </section>
+
+    <!-- Print grid -->
+    <section class="section" aria-labelledby="prints-title">
+      <div class="container">
+        <h2 id="prints-title" class="visually-hidden">All prints</h2>
+
+        <!--
+          HOW TO ADD A REAL PRINT
+          Copy one <article class="card"> and change:
+            - src / srcset: export each photo at 4:5, in two sizes, e.g.
+                assets/images/prints/dragon-800.webp   (800 x 1000)
+                assets/images/prints/dragon-1600.webp  (1600 x 2000)
+              then use:
+                <img class="print-card__photo"
+                     src="assets/images/prints/dragon-800.webp"
+                     srcset="assets/images/prints/dragon-800.webp 800w,
+                             assets/images/prints/dragon-1600.webp 1600w"
+                     sizes="(min-width: 64em) 22rem, (min-width: 48em) 45vw, 100vw"
+                     alt="Describe what's in the photo"
+                     width="800" height="1000" loading="lazy" decoding="async">
+            - alt: describe the photo for someone who can't see it
+            - keep loading="lazy" on everything except the first row
+            - title, description and the Material / Print time / Layers values
+        -->
+        <div class="grid">
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 1: what it is, its colors and finish." width="800" height="1000" decoding="async">
+            <h3>Print name 1</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 2: what it is, its colors and finish." width="800" height="1000" decoding="async">
+            <h3>Print name 2</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 3: what it is, its colors and finish." width="800" height="1000" decoding="async">
+            <h3>Print name 3</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 4: what it is, its colors and finish." width="800" height="1000" loading="lazy" decoding="async">
+            <h3>Print name 4</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 5: what it is, its colors and finish." width="800" height="1000" loading="lazy" decoding="async">
+            <h3>Print name 5</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 6: what it is, its colors and finish." width="800" height="1000" loading="lazy" decoding="async">
+            <h3>Print name 6</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 7: what it is, its colors and finish." width="800" height="1000" loading="lazy" decoding="async">
+            <h3>Print name 7</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+          <article class="card">
+            <img class="print-card__photo" src="assets/images/placeholder-4x5.svg" alt="[PLACEHOLDER] Describe print 8: what it is, its colors and finish." width="800" height="1000" loading="lazy" decoding="async">
+            <h3>Print name 8</h3>
+            <p class="text-muted"><span class="placeholder-tag">[PLACEHOLDER]</span> One or two lines: what it is and why it's fun.</p>
+            <dl class="print-meta">
+              <div><dt>Material</dt><dd>PLA</dd></div>
+              <div><dt>Print time</dt><dd>? hrs</dd></div>
+              <div><dt>Layers</dt><dd>0.2 mm</dd></div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing call to action -->
+    <section class="section cta-band" aria-labelledby="cta-title">
+      <div class="container container--narrow">
+        <h2 id="cta-title">Want one?</h2>
+        <p class="lead"><span class="placeholder-tag">[PLACEHOLDER]</span> Nothing's for sale online just yet. If something here caught your eye, ask about it.</p>
+        <a class="btn" href="contact.html">Ask about a print</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== SITE FOOTER (shared: keep identical on every page) ===== -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div>
+        <p class="site-footer__tagline">3D printing for everyone</p>
+        <p>&copy; 2026 Yeah, I'd Print That</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="how-its-made.html">How It's Made</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><span class="placeholder-tag">[PLACEHOLDER]</span> Social links</li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+  <!-- ===== /SITE FOOTER ===== -->
+</body>
+</html>

@@ -1,0 +1,39 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&amp;family=Oswald:wght@500;600&amp;display=swap');
+      .display { font-family: 'Black Han Sans', 'Arial Black', sans-serif; }
+      .label { font-family: 'Oswald', Arial, sans-serif; font-weight: 600; }
+    </style>
+    <path id="bottomArc" d="M 34,146 A 70,70 0 0 0 166,146" fill="none"/>
+    <clipPath id="circleClip">
+      <circle cx="100" cy="100" r="98"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base circle -->
+  <circle cx="100" cy="100" r="98" fill="#141414"/>
+
+  <!-- Accent wedge -->
+  <g clip-path="url(#circleClip)">
+    <path d="M 100 100 L 100 2 A 98 98 0 0 1 180 46 Z" fill="#FFB800" opacity="0.16"/>
+  </g>
+
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#FF6B00" stroke-width="3"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#FFB800" stroke-width="0.75" opacity="0.5"/>
+
+  <!-- Wordmark -->
+  <text x="100" y="76" text-anchor="middle" class="display" font-size="21" fill="#F5F0E8" letter-spacing="0.5">YEAH,</text>
+
+  <text x="100" y="106" text-anchor="middle" class="display" font-size="23" letter-spacing="0.5">
+    <tspan fill="#F5F0E8">I&#8217;D </tspan><tspan fill="none" stroke="#FF6B00" stroke-width="1.4">PRINT</tspan>
+  </text>
+
+  <text x="100" y="136" text-anchor="middle" class="display" font-size="21" fill="#F5F0E8" letter-spacing="0.5">THAT.</text>
+
+  <!-- Curved tagline -->
+  <text class="label" font-size="7.5" fill="#FFB800" letter-spacing="2.2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">3D PRINTING FOR EVERYONE</textPath>
+  </text>
+</svg>
